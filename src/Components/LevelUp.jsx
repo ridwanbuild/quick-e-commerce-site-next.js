@@ -6,7 +6,7 @@ export default function LevelUp() {
     <div className="rounded-lg my-16 p-10 lg:flex items-center gap-10 justify-between bg-slate-100">
 
       <div>
-        <Image src={"/Gaming Accessories.png"} width={300} height={300}/>
+        <Image src={"/Gaming Accessories.png"} width={300} height={300} alt="Gaming Image"/>
       </div>
 
       <div className="flex space-y-4 items-center justify-center flex-col">
@@ -21,7 +21,7 @@ export default function LevelUp() {
       </div>
 
     <div className="pt-8">
-        <Image src={"/Premium Headphones.png"} width={300} height={300}/>
+        <Image src={"/Premium Headphones.png"} width={300} height={300} alt="premium headphone"/>
       </div>
      
 

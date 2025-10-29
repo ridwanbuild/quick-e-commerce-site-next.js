@@ -1,3 +1,5 @@
+
+
 "use client";
 
 import React from "react";
@@ -7,27 +9,27 @@ import { Rating } from "react-simple-star-rating";
 import Link from "next/link";
 import { all_Products } from "@/JSONDataStore/productData";
 
-export default function AllProducts() {
+
+export default function RelativeProducts() {
 
 
-  const truncateText = (text, limit) => {
+    const truncateText = (text, limit) => {
     return text.length > limit ? text.slice(0, limit) + "..." : text;
   };
 
 
-
   return (
-    <div className="py-16">
+     <div className="py-16">
       <div>
         <div className=" flex flex-col items-center justify-center mb-8 space-y-1">
           <h2 className="text-2xl  capitalize font-bold text-gray-700">
-            Popular products
+            Relative products
           </h2>
           <div className=" bg-themeColor w-12 h-0.5"></div>
         </div>
 
         <div className="grid lg:grid-cols-5 grid-cols-2 gap-3 lg:gap-8">
-          {all_Products.map((product) => (
+          {all_Products.slice(0, 5).map((product) => (
             <div
               key={product.id}
               className="bg-white rounded-sm lg:rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden relative"
@@ -50,7 +52,7 @@ export default function AllProducts() {
               {/* Product Details */}
               <div className="p-3 flex flex-col lg:gap-2">
 
-                <h3 className="font-semibold  text-themeColor ">
+                 <h3 className="font-semibold  text-themeColor ">
                   {/* Mobile: show truncated name */}
                   <span className="text-sm block lg:hidden">
                     {truncateText(product.name, 12)}
@@ -81,6 +83,9 @@ export default function AllProducts() {
                   </button>
                 </div>
 
+
+
+
                 {/* price and buy now */}
                 <div className="flex lg:justify-between lg:items-center lg:flex-row flex-col gap-3 ">
                   <p className="text-sm font-medium lg:font-bold text-gray-900">
@@ -97,7 +102,12 @@ export default function AllProducts() {
 
 
                 </div>
+
+
+
               </div>
+
+              
             </div>
           ))}
         </div>
@@ -113,5 +123,5 @@ export default function AllProducts() {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -81,7 +81,7 @@ export default function HeroSection() {
 
 
               <div className="flex items-center justify-center">
-                <Image src={slide.image} width={300} height={300}/>
+                <Image src={slide.image} width={300} height={300} alt="hero section image"/>
               </div>
 
 
